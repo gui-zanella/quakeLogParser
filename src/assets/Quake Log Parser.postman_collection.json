@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "694302fd-407d-42b7-bf05-4d38ed952dd2",
+		"name": "Quake Log Parser",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7684913",
+		"_collection_link": "https://anatoly-kasparov.postman.co/workspace/Code~5ad75fb7-1113-4d7a-a6d6-ba84dc8c99b4/collection/7684913-694302fd-407d-42b7-bf05-4d38ed952dd2?action=share&source=collection_link&creator=7684913"
+	},
+	"item": [
+		{
+			"name": "Get game statistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/game/statistics?filePath=/home/gzanella/Documents/Pessoal/code/rubcube/quakeLogParser/src/assets/games.log",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"game",
+						"statistics"
+					],
+					"query": [
+						{
+							"key": "filePath",
+							"value": "/home/gzanella/Documents/Pessoal/code/rubcube/quakeLogParser/src/assets/games.log"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/game/statistics?filePath=/home/gzanella/Documents/Pessoal/code/rubcube/quakeLogParser/src/data/games.log",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"game",
+								"statistics"
+							],
+							"query": [
+								{
+									"key": "filePath",
+									"value": "/home/gzanella/Documents/Pessoal/code/rubcube/quakeLogParser/src/data/games.log"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "395"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18b-3/41kMHwMZ+s1ERnOcU8NfcNykQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 22 Sep 2024 21:01:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"totalDeaths\": 1069,\n    \"deathsByCause\": {\n        \"MOD_TRIGGER_HURT\": 193,\n        \"MOD_ROCKET_SPLASH\": 349,\n        \"MOD_FALLING\": 45,\n        \"MOD_ROCKET\": 213,\n        \"MOD_RAILGUN\": 132,\n        \"MOD_MACHINEGUN\": 45,\n        \"MOD_SHOTGUN\": 25,\n        \"MOD_TELEFRAG\": 25,\n        \"MOD_BFG_SPLASH\": 24,\n        \"MOD_BFG\": 16,\n        \"MOD_CRUSH\": 2\n    },\n    \"worldDeaths\": 240,\n    \"deathsByPlayer\": {\n        \"Isgalamido\": 187,\n        \"Dono da Bola\": 103,\n        \"Zeh\": 158,\n        \"Assasinu Credi\": 143,\n        \"Oootsimo\": 138,\n        \"Maluquinho\": 1,\n        \"Mal\": 57,\n        \"Chessus\": 42\n    }\n}"
+				},
+				{
+					"name": "400 Bad Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/game/statistics",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"game",
+								"statistics"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "36"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"24-xdGEVaOUCarr70EzkMnL5RGp0UU\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 Sep 2024 14:18:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "filePath query parameter is required"
+				},
+				{
+					"name": "500 Internal Server Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/game/statistics?filePath=/home/gzanella/Documents/Pessoal/code/rubcube/quakeLogParser/src/assets/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"game",
+								"statistics"
+							],
+							"query": [
+								{
+									"key": "filePath",
+									"value": "/home/gzanella/Documents/Pessoal/code/rubcube/quakeLogParser/src/assets/"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "33"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21-pOKbqHx0n3GcGcl3Bh1POgiRbk8\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 Sep 2024 14:19:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Error reading or parsing log file"
+				}
+			]
+		}
+	]
+}
